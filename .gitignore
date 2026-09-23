@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Raw data (large, re-downloadable)
+data/raw/
+
+# macOS
+.DS_Store

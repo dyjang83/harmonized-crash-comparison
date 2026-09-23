@@ -1,0 +1,29 @@
+# Pipeline configuration. Override paths/models here.
+
+paths:
+  raw_sgo: data/raw/sgo
+  raw_ol316: data/raw/ol316
+  narratives: data/interim/narratives.jsonl
+  extractions: data/processed/extractions.jsonl
+  gold_dir: data/gold
+  tables: paper/tables
+  figures: paper/figures
+
+extraction:
+  closed_model: claude-sonnet-4-6      # closed benchmark; haiku for cheaper runs
+  open_models:
+    - Qwen/Qwen2.5-7B-Instruct
+    - meta-llama/Llama-3.1-8B-Instruct
+  vllm_base_url: http://localhost:8000/v1
+  canonical_model: claude-sonnet-4-6   # extraction used to build T for the lift test
+
+annotation:
+  n_gold: 250
+  seed: 11
+  annotators: [A, B]
+
+lift_test:
+  embed: tfidf            # tfidf (offline, reproducible) | sbert
+  n_splits: 5
+  n_boot: 5000
+  group_by: manufacturer  # GroupKFold grouping; swap to a geography key for robustness
