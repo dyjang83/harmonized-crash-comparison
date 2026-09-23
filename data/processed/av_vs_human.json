@@ -1,0 +1,878 @@
+{
+  "years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "severity_var": "MAXSEV_IM",
+  "n_boot": 500,
+  "coarsened": {
+    "lighting": "dark_lighted/dark_unlighted pooled: CRSS 'Dark - Unknown Lighting'",
+    "weather": "clear and cloudy pooled: the schema has no cloudy member",
+    "locality": "intersection vs. not-intersection",
+    "collision_type": "single_vehicle and vru pooled: CRSS codes them as one",
+    "severity": "four-level: SGO Minor+Moderate merged, KABCO C+B merged"
+  },
+  "severity": {
+    "all": {
+      "threshold": "all",
+      "levels": [
+        "none",
+        "minor",
+        "serious",
+        "fatal"
+      ],
+      "n_crss": 209361,
+      "n_sgo": 1627,
+      "crss_weighted_n": 24300792.110777535,
+      "human_share": [
+        0.7168880532511402,
+        0.25126338923537345,
+        0.025565634746854783,
+        0.0062829227666312895
+      ],
+      "human_ci": [
+        [
+          0.7096064673378701,
+          0.2454147530138696,
+          0.024515405780059018,
+          0.005932681418574619
+        ],
+        [
+          0.7233177087436068,
+          0.2577573767539492,
+          0.026657909873270002,
+          0.006626705403594385
+        ]
+      ],
+      "av_share": [
+        0.8524892440073756,
+        0.13275968039336203,
+        0.009834050399508297,
+        0.004917025199754148
+      ],
+      "av_ci": [
+        [
+          0.8371235402581438,
+          0.11493546404425323,
+          0.005531653349723417,
+          0.0018438844499078057
+        ],
+        [
+          0.8690842040565457,
+          0.14689612784265518,
+          0.014751075599262446,
+          0.008604794099569761
+        ]
+      ],
+      "ratio": [
+        1.1891525324508812,
+        0.5283685808639559,
+        0.384658957107182,
+        0.782601566562071
+      ]
+    },
+    "any_injury": {
+      "threshold": "any_injury",
+      "levels": [
+        "none",
+        "minor",
+        "serious",
+        "fatal"
+      ],
+      "n_crss": 108398,
+      "n_sgo": 240,
+      "crss_weighted_n": 6879844.562021555,
+      "human_share": [
+        0.0,
+        0.8875054271668089,
+        0.09030221098205128,
+        0.02219236185113972
+      ],
+      "human_ci": [
+        [
+          0.0,
+          0.883591015389768,
+          0.08694596950897315,
+          0.02108619894241738
+        ],
+        [
+          0.0,
+          0.8914586478465371,
+          0.09384904306964033,
+          0.023331677062714364
+        ]
+      ],
+      "av_share": [
+        0.0,
+        0.9,
+        0.06666666666666667,
+        0.03333333333333333
+      ],
+      "av_ci": [
+        [
+          0.0,
+          0.8625,
+          0.0375,
+          0.0125
+        ],
+        [
+          0.0,
+          0.9375,
+          0.09802083333333325,
+          0.058333333333333334
+        ]
+      ],
+      "ratio": [
+        NaN,
+        1.0140783058342275,
+        0.7382617318186984,
+        1.5020182870540864
+      ]
+    },
+    "tow_away": {
+      "threshold": "tow_away",
+      "levels": [
+        "none",
+        "minor",
+        "serious",
+        "fatal"
+      ],
+      "n_crss": 75085,
+      "n_sgo": 500,
+      "crss_weighted_n": 7887766.903913862,
+      "human_share": [
+        0.5642915206281176,
+        0.3799789547254445,
+        0.04340324227464548,
+        0.012326282371792507
+      ],
+      "human_ci": [
+        [
+          0.5556711728299772,
+          0.37139302584848294,
+          0.042019075447461196,
+          0.01170523803910136
+        ],
+        [
+          0.5727523459797451,
+          0.3886813096973481,
+          0.04491140381867914,
+          0.012899966196813677
+        ]
+      ],
+      "av_share": [
+        0.726,
+        0.242,
+        0.022,
+        0.01
+      ],
+      "av_ci": [
+        [
+          0.69,
+          0.204,
+          0.012,
+          0.002
+        ],
+        [
+          0.76505,
+          0.278,
+          0.038,
+          0.02
+        ]
+      ],
+      "ratio": [
+        1.2865690400449104,
+        0.636877376998045,
+        0.506874575424324,
+        0.8112746161717034
+      ]
+    }
+  },
+  "structure": {
+    "all": [
+      {
+        "field": "lighting",
+        "levels": [
+          "daylight",
+          "dark",
+          "dawn_dusk"
+        ],
+        "n_crss": 208992,
+        "n_sgo": 948,
+        "crss_dropped": 924,
+        "sgo_dropped": 804,
+        "av_abstention_rate": 0.4589041095890411,
+        "interpretable": false,
+        "interpretability_note": "AV side abstains on 46% of records; the surviving rows are conditioned on the narrative mentioning this field, which is not a random subsample. Not a structural comparison.",
+        "human_share": [
+          0.6815575296259767,
+          0.27638683149257764,
+          0.042055638881445645
+        ],
+        "av_share": [
+          0.5305907172995781,
+          0.39135021097046413,
+          0.07805907172995781
+        ],
+        "ratio": [
+          0.7784973303585307,
+          1.4159510019238157,
+          1.8560904983516104
+        ],
+        "coarsened": "dark_lighted/dark_unlighted pooled: CRSS 'Dark - Unknown Lighting'"
+      },
+      {
+        "field": "weather",
+        "levels": [
+          "clear_or_cloudy",
+          "rain",
+          "snow",
+          "fog",
+          "other"
+        ],
+        "n_crss": 203295,
+        "n_sgo": 246,
+        "crss_dropped": 6621,
+        "sgo_dropped": 1506,
+        "av_abstention_rate": 0.8595890410958904,
+        "interpretable": false,
+        "interpretability_note": "AV side abstains on 86% of records; the surviving rows are conditioned on the narrative mentioning this field, which is not a random subsample. Not a structural comparison.",
+        "human_share": [
+          0.8851544851913694,
+          0.08899773855652982,
+          0.02023955985068238,
+          0.004295432881008919,
+          0.0013127835204095818
+        ],
+        "av_share": [
+          0.9186991869918699,
+          0.06910569105691057,
+          0.012195121951219513,
+          0.0,
+          0.0
+        ],
+        "ratio": [
+          1.0378970025704024,
+          0.7764881690001127,
+          0.6025388912204211,
+          0.0,
+          0.0
+        ],
+        "coarsened": "clear and cloudy pooled: the schema has no cloudy member"
+      },
+      {
+        "field": "locality",
+        "levels": [
+          "intersection",
+          "non_intersection"
+        ],
+        "n_crss": 209560,
+        "n_sgo": 1463,
+        "crss_dropped": 356,
+        "sgo_dropped": 289,
+        "av_abstention_rate": 0.1649543378995434,
+        "interpretable": true,
+        "interpretability_note": "",
+        "human_share": [
+          0.45057163766944075,
+          0.5494283623305591
+        ],
+        "av_share": [
+          0.4709501025290499,
+          0.5290498974709501
+        ],
+        "ratio": [
+          1.0452280240385652,
+          0.9629096962283347
+        ],
+        "coarsened": "intersection vs. not-intersection"
+      },
+      {
+        "field": "collision_type",
+        "levels": [
+          "rear_end",
+          "head_on",
+          "cross_path",
+          "sideswipe",
+          "no_mv_partner",
+          "other"
+        ],
+        "n_crss": 209479,
+        "n_sgo": 1559,
+        "crss_dropped": 437,
+        "sgo_dropped": 193,
+        "av_abstention_rate": 0.11015981735159817,
+        "interpretable": true,
+        "interpretability_note": "",
+        "human_share": [
+          0.2853273226514568,
+          0.0277750621519484,
+          0.22800640202011288,
+          0.14408695580041223,
+          0.30158236900084384,
+          0.013221888375225827
+        ],
+        "av_share": [
+          0.32520846696600386,
+          0.010904425914047467,
+          0.10198845413726748,
+          0.20333547145606157,
+          0.23284156510583706,
+          0.12572161642078256
+        ],
+        "ratio": [
+          1.1397733099793743,
+          0.39259771425147033,
+          0.44730522140457657,
+          1.4111997184375231,
+          0.7720662380803354,
+          9.508597626368575
+        ],
+        "coarsened": "single_vehicle and vru pooled: CRSS codes them as one"
+      }
+    ],
+    "any_injury": [
+      {
+        "field": "lighting",
+        "levels": [
+          "daylight",
+          "dark",
+          "dawn_dusk"
+        ],
+        "n_crss": 108101,
+        "n_sgo": 91,
+        "crss_dropped": 297,
+        "sgo_dropped": 149,
+        "av_abstention_rate": 0.6208333333333333,
+        "interpretable": false,
+        "interpretability_note": "AV side abstains on 62% of records; the surviving rows are conditioned on the narrative mentioning this field, which is not a random subsample. Not a structural comparison.",
+        "human_share": [
+          0.674781897710249,
+          0.28524396122147333,
+          0.039974141068277576
+        ],
+        "av_share": [
+          0.45054945054945056,
+          0.46153846153846156,
+          0.08791208791208792
+        ],
+        "ratio": [
+          0.6676964098745225,
+          1.6180481422360666,
+          2.1992239373431497
+        ],
+        "coarsened": "dark_lighted/dark_unlighted pooled: CRSS 'Dark - Unknown Lighting'"
+      },
+      {
+        "field": "weather",
+        "levels": [
+          "clear_or_cloudy",
+          "rain",
+          "snow",
+          "fog",
+          "other"
+        ],
+        "n_crss": 105335,
+        "n_sgo": 32,
+        "crss_dropped": 3063,
+        "sgo_dropped": 208,
+        "av_abstention_rate": 0.8666666666666667,
+        "interpretable": false,
+        "interpretability_note": "AV side abstains on 87% of records; the surviving rows are conditioned on the narrative mentioning this field, which is not a random subsample. Not a structural comparison.",
+        "human_share": [
+          0.8970707467803983,
+          0.0837095880012675,
+          0.014036996757359753,
+          0.003743987414779007,
+          0.0014386810461955086
+        ],
+        "av_share": [
+          0.78125,
+          0.1875,
+          0.03125,
+          0.0,
+          0.0
+        ],
+        "ratio": [
+          0.8708900639151584,
+          2.239886785694859,
+          2.2262596864685658,
+          0.0,
+          0.0
+        ],
+        "coarsened": "clear and cloudy pooled: the schema has no cloudy member"
+      },
+      {
+        "field": "locality",
+        "levels": [
+          "intersection",
+          "non_intersection"
+        ],
+        "n_crss": 108233,
+        "n_sgo": 188,
+        "crss_dropped": 165,
+        "sgo_dropped": 52,
+        "av_abstention_rate": 0.21666666666666667,
+        "interpretable": false,
+        "interpretability_note": "AV side abstains on 22% of records; the surviving rows are conditioned on the narrative mentioning this field, which is not a random subsample. Not a structural comparison.",
+        "human_share": [
+          0.5025237273931868,
+          0.4974762726068133
+        ],
+        "av_share": [
+          0.5212765957446809,
+          0.4787234042553192
+        ],
+        "ratio": [
+          1.0373173789201426,
+          0.9623039944131854
+        ],
+        "coarsened": "intersection vs. not-intersection"
+      },
+      {
+        "field": "collision_type",
+        "levels": [
+          "rear_end",
+          "head_on",
+          "cross_path",
+          "sideswipe",
+          "no_mv_partner",
+          "other"
+        ],
+        "n_crss": 108177,
+        "n_sgo": 208,
+        "crss_dropped": 221,
+        "sgo_dropped": 32,
+        "av_abstention_rate": 0.13333333333333333,
+        "interpretable": true,
+        "interpretability_note": "",
+        "human_share": [
+          0.26811778759416294,
+          0.051113005733930704,
+          0.2939692264237504,
+          0.0725322585135089,
+          0.30941969357948423,
+          0.004848028155162814
+        ],
+        "av_share": [
+          0.40865384615384615,
+          0.02403846153846154,
+          0.11057692307692307,
+          0.09134615384615384,
+          0.3173076923076923,
+          0.04807692307692308
+        ],
+        "ratio": [
+          1.524157907689459,
+          0.4703002923286102,
+          0.37615135578010733,
+          1.2593865918175002,
+          1.0254928787400592,
+          9.916799477685476
+        ],
+        "coarsened": "single_vehicle and vru pooled: CRSS codes them as one"
+      }
+    ],
+    "tow_away": [
+      {
+        "field": "lighting",
+        "levels": [
+          "daylight",
+          "dark",
+          "dawn_dusk"
+        ],
+        "n_crss": 75122,
+        "n_sgo": 263,
+        "crss_dropped": 199,
+        "sgo_dropped": 319,
+        "av_abstention_rate": 0.5481099656357389,
+        "interpretable": false,
+        "interpretability_note": "AV side abstains on 55% of records; the surviving rows are conditioned on the narrative mentioning this field, which is not a random subsample. Not a structural comparison.",
+        "human_share": [
+          0.6216150311559672,
+          0.33420029871378565,
+          0.04418467013024736
+        ],
+        "av_share": [
+          0.44106463878326996,
+          0.467680608365019,
+          0.09125475285171103
+        ],
+        "ratio": [
+          0.709546289385985,
+          1.3994021255066202,
+          2.0653034770365086
+        ],
+        "coarsened": "dark_lighted/dark_unlighted pooled: CRSS 'Dark - Unknown Lighting'"
+      },
+      {
+        "field": "weather",
+        "levels": [
+          "clear_or_cloudy",
+          "rain",
+          "snow",
+          "fog",
+          "other"
+        ],
+        "n_crss": 72969,
+        "n_sgo": 77,
+        "crss_dropped": 2352,
+        "sgo_dropped": 505,
+        "av_abstention_rate": 0.8676975945017182,
+        "interpretable": false,
+        "interpretability_note": "AV side abstains on 87% of records; the surviving rows are conditioned on the narrative mentioning this field, which is not a random subsample. Not a structural comparison.",
+        "human_share": [
+          0.863213075726968,
+          0.10498557183019806,
+          0.024746938189729346,
+          0.005377515614619523,
+          0.001676898638484895
+        ],
+        "av_share": [
+          0.8311688311688312,
+          0.14285714285714285,
+          0.025974025974025976,
+          0.0,
+          0.0
+        ],
+        "ratio": [
+          0.9628779435122085,
+          1.3607311973134522,
+          1.0495854386061345,
+          0.0,
+          0.0
+        ],
+        "coarsened": "clear and cloudy pooled: the schema has no cloudy member"
+      },
+      {
+        "field": "locality",
+        "levels": [
+          "intersection",
+          "non_intersection"
+        ],
+        "n_crss": 75251,
+        "n_sgo": 466,
+        "crss_dropped": 70,
+        "sgo_dropped": 116,
+        "av_abstention_rate": 0.19931271477663232,
+        "interpretable": true,
+        "interpretability_note": "",
+        "human_share": [
+          0.4382665755086304,
+          0.5617334244913698
+        ],
+        "av_share": [
+          0.43991416309012876,
+          0.5600858369098712
+        ],
+        "ratio": [
+          1.003759327481422,
+          0.9970669582587322
+        ],
+        "coarsened": "intersection vs. not-intersection"
+      },
+      {
+        "field": "collision_type",
+        "levels": [
+          "rear_end",
+          "head_on",
+          "cross_path",
+          "sideswipe",
+          "no_mv_partner",
+          "other"
+        ],
+        "n_crss": 75197,
+        "n_sgo": 522,
+        "crss_dropped": 124,
+        "sgo_dropped": 60,
+        "av_abstention_rate": 0.10309278350515463,
+        "interpretable": true,
+        "interpretability_note": "",
+        "human_share": [
+          0.20776376915772435,
+          0.046531496362106524,
+          0.2953064192243985,
+          0.07547119466690926,
+          0.3688907176757828,
+          0.006036402913078643
+        ],
+        "av_share": [
+          0.32950191570881227,
+          0.028735632183908046,
+          0.18199233716475097,
+          0.12643678160919541,
+          0.2835249042145594,
+          0.04980842911877394
+        ],
+        "ratio": [
+          1.5859450232570151,
+          0.6175522910393496,
+          0.6162830379466218,
+          1.6752985316745264,
+          0.7685877974944026,
+          8.251342701272902
+        ],
+        "coarsened": "single_vehicle and vru pooled: CRSS codes them as one"
+      }
+    ]
+  },
+  "retained": {
+    "all": {
+      "crss_n": 209916,
+      "crss_weighted_n": 24352032.28180699,
+      "sgo_n": 1752,
+      "crss_share_of_all": 1.0,
+      "sgo_share_of_all": 1.0
+    },
+    "any_injury": {
+      "crss_n": 108398,
+      "crss_weighted_n": 6879844.562021555,
+      "sgo_n": 240,
+      "crss_share_of_all": 0.5163875073839059,
+      "sgo_share_of_all": 0.136986301369863
+    },
+    "tow_away": {
+      "crss_n": 75321,
+      "crss_weighted_n": 7911767.206399331,
+      "sgo_n": 582,
+      "crss_share_of_all": 0.35881495455324985,
+      "sgo_share_of_all": 0.3321917808219178
+    }
+  },
+  "per_year": {
+    "2021": {
+      "threshold": "any_injury",
+      "levels": [
+        "none",
+        "minor",
+        "serious",
+        "fatal"
+      ],
+      "n_crss": 28731,
+      "n_sgo": 240,
+      "crss_weighted_n": 1757390.8392798805,
+      "human_share": [
+        0.0,
+        0.8904656427159935,
+        0.08705330234908865,
+        0.02248105493491786
+      ],
+      "human_ci": [
+        [
+          0.0,
+          0.8827152880416419,
+          0.08231601861927391,
+          0.020621940844867993
+        ],
+        [
+          0.0,
+          0.8958958521218433,
+          0.09337766246075385,
+          0.024402781552414588
+        ]
+      ],
+      "av_share": [
+        0.0,
+        0.9,
+        0.06666666666666667,
+        0.03333333333333333
+      ],
+      "av_ci": [
+        [
+          0.0,
+          0.8708333333333333,
+          0.0375,
+          0.0125
+        ],
+        [
+          0.0,
+          0.9370833333333333,
+          0.09166666666666666,
+          0.058333333333333334
+        ]
+      ],
+      "ratio": [
+        NaN,
+        1.0107071590712091,
+        0.7658143329167408,
+        1.4827299443835076
+      ]
+    },
+    "2022": {
+      "threshold": "any_injury",
+      "levels": [
+        "none",
+        "minor",
+        "serious",
+        "fatal"
+      ],
+      "n_crss": 27488,
+      "n_sgo": 240,
+      "crss_weighted_n": 1695361.833751684,
+      "human_share": [
+        0.0,
+        0.8843218096820611,
+        0.09254389578613477,
+        0.023134294531804125
+      ],
+      "human_ci": [
+        [
+          0.0,
+          0.874906829127578,
+          0.08581204842171634,
+          0.021314666597643025
+        ],
+        [
+          0.0,
+          0.8923802228684379,
+          0.10063840478538552,
+          0.025647368946756365
+        ]
+      ],
+      "av_share": [
+        0.0,
+        0.9,
+        0.06666666666666667,
+        0.03333333333333333
+      ],
+      "av_ci": [
+        [
+          0.0,
+          0.8708333333333333,
+          0.0375,
+          0.0125
+        ],
+        [
+          0.0,
+          0.9370833333333333,
+          0.09166666666666666,
+          0.058333333333333334
+        ]
+      ],
+      "ratio": [
+        NaN,
+        1.0177290553577727,
+        0.7203788656221115,
+        1.4408623218446521
+      ]
+    },
+    "2023": {
+      "threshold": "any_injury",
+      "levels": [
+        "none",
+        "minor",
+        "serious",
+        "fatal"
+      ],
+      "n_crss": 25790,
+      "n_sgo": 240,
+      "crss_weighted_n": 1723451.331884782,
+      "human_share": [
+        0.0,
+        0.8884808995376778,
+        0.08967107997958002,
+        0.021848020482742172
+      ],
+      "human_ci": [
+        [
+          0.0,
+          0.8823658885230943,
+          0.0833563797717012,
+          0.020046817017116157
+        ],
+        [
+          0.0,
+          0.8960852884797482,
+          0.09550142559199434,
+          0.023940033380331308
+        ]
+      ],
+      "av_share": [
+        0.0,
+        0.9,
+        0.06666666666666667,
+        0.03333333333333333
+      ],
+      "av_ci": [
+        [
+          0.0,
+          0.8708333333333333,
+          0.0375,
+          0.0125
+        ],
+        [
+          0.0,
+          0.9370833333333333,
+          0.09166666666666666,
+          0.058333333333333334
+        ]
+      ],
+      "ratio": [
+        NaN,
+        1.0129649387716901,
+        0.7434578314641472,
+        1.525691234117226
+      ]
+    },
+    "2024": {
+      "threshold": "any_injury",
+      "levels": [
+        "none",
+        "minor",
+        "serious",
+        "fatal"
+      ],
+      "n_crss": 26389,
+      "n_sgo": 240,
+      "crss_weighted_n": 1703640.5571052083,
+      "human_share": [
+        0.0,
+        0.8866331473527851,
+        0.09206130210217393,
+        0.021305550545040988
+      ],
+      "human_ci": [
+        [
+          0.0,
+          0.8781893712206151,
+          0.0853462464768542,
+          0.019201677103403238
+        ],
+        [
+          0.0,
+          0.8956504785090071,
+          0.09988571093705566,
+          0.02357936211625435
+        ]
+      ],
+      "av_share": [
+        0.0,
+        0.9,
+        0.06666666666666667,
+        0.03333333333333333
+      ],
+      "av_ci": [
+        [
+          0.0,
+          0.8708333333333333,
+          0.0375,
+          0.0125
+        ],
+        [
+          0.0,
+          0.9370833333333333,
+          0.09166666666666666,
+          0.058333333333333334
+        ]
+      ],
+      "ratio": [
+        NaN,
+        1.0150759676503458,
+        0.7241551568831482,
+        1.5645375256961804
+      ]
+    }
+  }
+}
